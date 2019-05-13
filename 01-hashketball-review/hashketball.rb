@@ -153,19 +153,33 @@ puts shoe_size("Bismak Biyombo")
 # Define a method called get_names that takes an array of instructors
 # and returns just their names.
 instructors = [
-  {name: 'Charlie', hometown: 'Charlesworthston, CH'},
-  {name: 'Evans', hometown: 'Queens, NY' },
-  {name: 'Avi', hometown: 'Bronx, NY'},
-  {name: 'Rishi', hometwon: 'North Brunswick, NJ' }
+  {name: 'Charlie', hometown: 'Charlesworthston, CH', age: 57},
+  {name: 'Evans', hometown: 'Queens, NY', age: 3 },
+  {name: 'Avi', hometown: 'Bronx, NY', age: 92},
+  {name: 'Rishi', hometown: 'North Brunswick, NJ', age: 20}
 ]
 
-# give me an array of names
+# return an array of names
 def get_names(instructors)
+  instructors.map do |instructor|
+    instructor[:name]
+  end
 end
 
 
 def get_hometowns(instructors)
+  instructors.map do |instructor|
+    instructor[:hometown]
+  end
 end
+
+def who_can_legally_drink(instructors)
+  instructors.select do |instructor|
+    instructor[:age] >= 21
+  end
+end
+
+binding.pry
 
 # EXERCISE
 # What do the following return?
