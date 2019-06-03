@@ -29,7 +29,7 @@
 
     - GET
     - POST
-    - PATCH/PUT
+    - PATCH/PUT --
     - DELETE
 
 ### Rack
