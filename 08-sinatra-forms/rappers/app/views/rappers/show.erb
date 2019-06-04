@@ -3,3 +3,12 @@
 <%=@rapper.name%>'s Age: <%=@rapper.age%>
 <br>
 <%=@rapper.name%>'s Fire: <%=@rapper.fire%>
+<br>
+<a href="/rappers/<%=@rapper.id%>/edit">edit</a>
+<a href="/rappers/<%=@rapper.id%>/delete">delete</a>
+
+
+<form action="/rappers/<%=@rapper.id%>/delete" method="post">
+  <input id="hidden" type="hidden" name="_method" value="delete">
+  <input type="submit" value="delete">
+</form>
