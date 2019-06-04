@@ -1,0 +1,10 @@
+<h1>Code Blooded Rappers</h1>
+
+<ul>
+  <%@rappers.each do |rapper|%>
+<li>
+  <a href="/rappers/<%=rapper.id%>" ><%=rapper.name%></a>
+</li>
+
+  <%end%>
+</ul>
