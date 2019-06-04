@@ -1,0 +1,10 @@
+Rapper Update Page
+
+
+<form action="/rappers/<%=@rapper.id%>" method="post">
+    <input id = "hidden" type = "hidden" name = "_method" value = "patch">
+New Name:  <input type="text" name="name" placeholder="enter rapper name">
+New Age:  <input type="number" name="age" placeholder="enter age">
+New Fire:  <input type="text" name="fire" placeholder="fire or nah">
+  <input type="submit" value="update">
+</form>
