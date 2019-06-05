@@ -1,0 +1,12 @@
+<h1>Songs#index</h1>
+<p>Find me in app/views/songs/index.html.erb</p>
+
+<ul>
+
+<%@songs.each do |song| %>
+  <li>
+    <%=link_to song.title, "/songs/#{song.id}"%>
+  </li>
+<%end%>
+
+</ul>
