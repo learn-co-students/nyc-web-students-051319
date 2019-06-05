@@ -1,0 +1,14 @@
+<%=@rapper.name%>'s Page
+<br>
+<%=@rapper.name%>'s Age: <%=@rapper.age%>
+<br>
+<%=@rapper.name%>'s Fire: <%=@rapper.fire%>
+<br>
+
+
+
+
+<form action="/rappers/<%=@rapper.id%>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <input type="submit" value="delete rapper">
+</form>
