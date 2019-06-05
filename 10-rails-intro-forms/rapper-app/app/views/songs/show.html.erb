@@ -1,0 +1,6 @@
+<h1><%=@song.title%></h1>
+
+<%= button_to "delete", @song, :method => :delete %>
+
+<p>Find me in app/views/songs/show.html.erb</p>
+<%=link_to "Edit This Song", "/songs/#{@song.id}/edit"%>
