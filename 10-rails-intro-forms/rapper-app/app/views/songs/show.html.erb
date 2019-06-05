@@ -1,0 +1,5 @@
+<h1> HEYYY </h1>
+
+<p> Song name: <%=@song.title%> </p>
+
+<%=button_to "Delete Song", {action: "delete", id: @song.id}, method: :delete, data: { confirm: "Are you sure?"}%>
