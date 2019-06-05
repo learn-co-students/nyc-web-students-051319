@@ -1,0 +1,9 @@
+<h1>Songs Index</h1>
+<ul>
+  <%@songs.each do |song|%>
+  <li>
+    <%=link_to song.title, "/songs/#{song.id}"%>
+  </li>
+  <%end%>
+</ul>
+<%=link_to "Create New Song", "/songs/new"%>
