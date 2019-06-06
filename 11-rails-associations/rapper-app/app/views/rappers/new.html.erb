@@ -1,0 +1,30 @@
+New Form
+
+
+Form Tag
+<%=form_tag "/rappers" do %>
+  <%= label_tag "name:"%>
+  <%= text_field_tag "rapper[name]"%>
+  <%= label_tag "something:"%>
+  <%= text_field_tag "something"%>
+  <%= number_field_tag "rapper[age]"%>
+  <%= text_field_tag "rapper[fire]"%>
+  <%= submit_tag "Submit"%>
+<%end%>
+
+<br>
+
+
+Form For
+
+<%=form_for @rapper do |f|%>
+<%=f.label "name"%>
+<%=f.text_field "name"%>
+<%=f.label "age"%>
+<%=f.number_field "age"%>
+<%=f.label "fire"%>
+<%=f.text_field "fire"%>
+<%=f.submit "Submit"%>
+
+
+<%end%>
