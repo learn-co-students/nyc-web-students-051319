@@ -1,0 +1,20 @@
+<h1>Songs#new</h1>
+<p>Find me in app/views/songs/new.html.erb</p>
+
+<%if flash[:message] %>
+  <h2><%=flash[:message]%></h2>
+<%end%>
+
+
+
+<%=form_for @song do |f|%>
+  <%=f.label :title%>
+  <%=f.text_field :title%>
+
+  <%#1st Argument: model, 2nd Argument: attribute of the model, 3rd Argument: list, 4th Argument: attribute of the list model that we want, 5th Argument: attribute of the list model that we display on webpage %>
+  <%#collection_select(:song, :rapper_id, @rappers, :id, :name, prompt: true)%>
+
+  <%#1st Argument: attribute of the model, 2nd Argument: list, 3rd Argument: attribute of the list model that we want, 4th Argument: attribute of the list model that we display on webpage %>
+  <%=f.collection_select(:rapper_id, @rappers, :id, :name, prompt: true)%>
+  <%=f.submit :submit%>
+<%end%>
