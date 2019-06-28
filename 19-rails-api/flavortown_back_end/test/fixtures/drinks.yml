@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  purple: false
+  fizzy: 1
+
+two:
+  purple: false
+  fizzy: 1

@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Cheese:</strong>
+  <%= @fry.cheese %>
+</p>
+
+<p>
+  <strong>Style:</strong>
+  <%= @fry.style %>
+</p>
+
+<%= link_to 'Edit', edit_fry_path(@fry) %> |
+<%= link_to 'Back', fries_path %>
