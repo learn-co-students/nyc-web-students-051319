@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hello World</title>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+      // render takes 2 arguments:
+      // 1. The "HTML" (JSX) that we want to append to the page
+      // 2. The place on the DOM where you want to slap it
+      // function createHeader(greeting, color, bgColor, tagline){
+      //   return (
+      //     <div className="header" style={{borderStyle: "solid", color: color, backgroundColor: bgColor}}>
+      //       <h1>{greeting}</h1>
+      //       <p>{tagline}</p>
+      //     </div>
+      //   )
+      // }
+
+      // ReactDOM.render(
+      //   <div>
+      //     {createHeader("Yo!", "red", "green", "My dude!")}
+      //     {createHeader("Hello!", "blue", "yellow", "World?")}
+      //     {createHeader("Goodbye!", "green", "black", "Beefy steak")}
+      //   </div>
+      //   , 
+      //   document.getElementById('root')
+      // )
+
+
+
+      function Header(props){
+        console.log(props)
+
+        return (
+          <div className="header" style={{borderStyle: "solid", color: props.color, backgroundColor: props.bgColor}}>
+            <h1>{props.text}</h1>
+            <p>{props.tagline}</p>
+          </div>
+        )
+      }
+
+      ReactDOM.render(
+        <div>
+          <Header text="Hello!" tagline="World~" color="red" bgColor="green"/>
+          <Header text="Yo!" tagline="Dawg" color="blue" bgColor="yellow"/>
+          <Header text="Beefy!" tagline="McSteaker~" color="green" bgColor="black"/>
+        </div>
+        , 
+        document.getElementById('root')
+      )
+    </script>
+  </body>
+</html>
