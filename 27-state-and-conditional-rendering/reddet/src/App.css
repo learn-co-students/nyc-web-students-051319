@@ -1,0 +1,199 @@
+.navbar > .top {
+  display: flex;
+  justify-content: space-between;
+  border-bottom-style: solid;
+  border-color: rgba(150,150,150,0.25);
+  border-width: 1px;
+  padding: 10px;
+  padding-left: 15px;
+}
+
+.navbar > .bottom {
+  display: flex;
+  width: 100%;
+  padding: 5px;
+  padding-left: 15vw;
+}
+.navbar {
+  width: 100%;
+}
+.search-bar {
+  display: flex;
+  padding-left: 10px;
+  padding-right: 10px;
+  align-items: center;
+  justify-content: flex-start;
+  flex-grow: 8;
+}
+.search-bar > * {
+  height: 100%;
+}
+
+.search-bar > select {
+  width: 35%;
+  margin: 5px;
+  font-weight: bold;
+  border-style: none;
+  background-color: white;
+}
+
+
+.search-bar > input {
+  width: 65%;
+  margin: 5px;
+  border-radius: 5px;
+  border-width: 0.5px;
+  border-color: rgba(200,200,200, 0.2);
+  background-color: rgba(246,246,246);
+
+  padding-left: 20px;
+}
+
+.user-controls {
+  border-left-style: solid;
+  border-left-width: 1px;
+  border-left-color: rgba(220,220,220);
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.user-controls > button {
+  padding-left: 35px;
+  padding-right: 35px;
+  font-size: 10px;
+  font-weight: bold;
+  border-radius: 5px;  
+}
+.signup {
+  background-color: rgba(51,121,204);
+  color: white;
+  border-color: rgba(51,121,204);
+}
+
+.login {
+  border-color: rgba(51,121,204);
+  color: rgba(51,121,204);
+}
+
+
+.home-button {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+}
+
+.home-button > span {
+  color: rgba(208,89,98);
+}
+.logo {
+  width: 30px;
+  margin: 2px;
+  margin-right: 7px;
+}
+
+.filter-bar {
+  display: flex;
+}
+.filter-bar > * {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.filter-bar > select {
+  color: rgba(51,121,204);
+  font-weight: bold;
+  border-style: none;
+  background-color: white;
+}
+
+.view-controls {
+  border-right-style: solid;
+  border-right-width: 1px;
+  border-right-color: rgba(220,220,220);
+}
+
+.view-controls > span {
+  font-weight: bold;
+  color: rgba(120,120,120);
+  font-size: 10px;
+}
+
+.view-controls > button {
+  color: rgba(51,121,204);
+  font-weight: bold;
+  font-size: 10px;
+  border-style: none;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-container {
+  width: 100%;
+  display: grid;
+  grid-template-areas: 
+    ". pc pc pc .";
+  background-color: rgba(219,224,229);
+  min-height: 100vh;
+}
+
+.post-container {
+  grid-area: pc;
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+
+.post-card {
+  display: flex;
+  margin: 5px;
+  border-style: solid;
+  border-radius: 5px;
+  border-width: 1px;
+  border-color: rgba(120,120,120,0.5);
+  background-color: white;
+}
+
+.post-card > .body {
+  padding: 5px;
+}
+
+.body > strong {
+  font-size: 12px;
+}
+
+.body > span {
+  color: rgba(120,120,120);
+  font-size: 12px;
+}
+
+.upvote-panel {
+  text-align: center;
+  padding: 5px;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  background-color: rgba(240,240,240);
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.list {
+  flex-direction: row;
+  align-items: center;
+}
+
+.upvote-panel > strong {
+  font-size: 12px;
+}
+
+.upvote-panel > button {
+  font-size: 15px;
+  background-color: rgba(240,240,240);
+  color: rgba(120,120,120);
+  border-style: none;
+}
