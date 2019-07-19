@@ -30,7 +30,7 @@ class PostCard extends React.Component {
 
   render(){
     let {community, author_name, created_at, content, upvotes, comments, id} = this.props.post
-
+    console.log(this.props)
     return (
       <div className="post-card">
         <div className="upvote-panel">

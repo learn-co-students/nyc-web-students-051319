@@ -8,20 +8,31 @@ class TickerContainer extends React.Component {
   }
 
   start = () => {
-    this.beef = setInterval(() => {
+    this.ticker = setInterval(() => {
       this.setState({
         value: Math.round(Math.random()*(100))
       })
     }, 1000)
   }
 
- 
+  componentDidMount(){
+    this.start()
+  }
 
-  
+
+  stop = () => {
+    clearInterval(this.ticker)
+  }
+
+  componentWillUnmount(){
+    this.stop()
+  }
+ 
+ 
   render(){
     return (
       <div className="box">
-        <button>Stop Ticker</button>
+        <button onClick={this.stop}>Stop Ticker</button>
         <Ticker value={this.state.value}/>
       </div>
     );
