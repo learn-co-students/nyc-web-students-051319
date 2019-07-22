@@ -1,6 +1,6 @@
 import React from 'react'
-import CommentCard from './CommentCard.js'
-import NewCommentForm from './NewCommentForm.js'
+import CommentCard from '../components/CommentCard.js'
+import NewCommentForm from '../components/NewCommentForm.js'
 
 function CommentList(props){
 

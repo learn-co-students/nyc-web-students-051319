@@ -8,26 +8,26 @@ React Best Practices
 ## Objectives
 
 - Opinions
-  - [ ] Code Organization/file structure 
-  - [ ] Presentational vs Container components
+  - [x] Code Organization/file structure 
+  - [x] Presentational vs Container components
 
 - Optimizations:
-  - [ ] Functional vs Class Components
-  - [ ] Fragments
+  - [x] Functional vs Class Components
+  - [x] Fragments
 
 - Best Practices:
-  - [ ] Functional setState
-  - [ ] "then" callback for setState
-  - [ ] Callbacks (avoid useless wrapping)
+  - [x] Functional setState
+  - [x] "then" callback for setState
+  - [x] Callbacks (avoid useless wrapping)
 
 - JS tricks/bugs often seen in React:
-  - [ ] Arrow functions returning objects
-  - [ ] Destructuring
-  - [ ] Spread (w/ prepend and append)
-  - [ ] Objects with the same key/value name
-  - [ ] constructor vs. ES7 instance variables
-  - [ ] map (as a way to update objects in an array of objects)
-  - [ ] { [variable]: "as_key" }
+  - [x] Arrow functions returning objects
+  - [x] Destructuring
+  - [x] Spread (w/ prepend and append)
+  - [x] Objects with the same key/value name
+  - [x] constructor vs. ES7 instance variables
+  - [x] map (as a way to update objects in an array of objects)
+  - [x] { [variable]: "as_key" }
 
 ## Resources
 

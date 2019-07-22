@@ -1,8 +1,8 @@
 import React from 'react'
-import HomeButton from './HomeButton'
-import SearchBar from './SearchBar'
-import UserControls from './UserControls'
-import FilterBar from './FilterBar'
+import HomeButton from '../components/HomeButton'
+import SearchBar from '../components/SearchBar'
+import UserControls from '../components/UserControls'
+import FilterBar from '../components/FilterBar'
 
 
 function NavBar(props){

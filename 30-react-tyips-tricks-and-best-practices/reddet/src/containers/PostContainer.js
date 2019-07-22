@@ -1,6 +1,6 @@
 import React from 'react'
-import PostCard from './PostCard'
-import PostListItem from './PostListItem'
+import PostCard from '../components/PostCard'
+import PostListItem from '../components/PostListItem'
 import CommentList from './CommentList'
 
 class PostContainer extends React.Component{

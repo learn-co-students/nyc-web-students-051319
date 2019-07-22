@@ -8,7 +8,7 @@ class NewCommentForm extends React.Component{
 
   handleChange = (event) =>{
     this.setState({
-      newContent: event.target.value
+      [event.target.name]: event.target.value
     })
   }
 
@@ -36,7 +36,7 @@ class NewCommentForm extends React.Component{
   render(){
     return (
       <div className="comment-form">
-        <textarea onChange={this.handleChange} value={this.state.newContent} placeholder="What are your thoughts?"/>
+        <textarea onChange={this.handleChange} name="newContent" value={this.state.newContent} placeholder="What are your thoughts?"/>        
         <div className="comment-form-bottom-panel">
           <button onClick={this.handleSubmit}>Comment</button>
         </div>
