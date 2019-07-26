@@ -12,21 +12,28 @@ class PostContainer extends React.Component{
 
   upVote = (id) => {    
     fetch(`http://localhost:3001/api/v1/posts/${id}/up_vote`, {
-      method: "PATCH"
+      method: "PATCH",
+      headers: {"Authorization": localStorage.token}
     })
     .then(res => res.json())
-    .then(newPost => {
-      const newPosts = this.state.posts.map(post => {
-        if(post.id === id){
-          return newPost
-        } else {
-          return post
-        }
-      })
+    .then(response => {
 
-      this.setState({
-        posts: newPosts
-      })
+      if (response.errors){
+        alert(response.errors)
+      } else {
+        const newPosts = this.state.posts.map(post => {
+          if(post.id === id){
+            return response
+          } else {
+            return post
+          }
+        })
+
+        this.setState({
+          posts: newPosts
+        })
+      }
+
     })
   }
 

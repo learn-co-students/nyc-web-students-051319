@@ -16,14 +16,14 @@ class App extends Component {
   }
 
   componentDidMount(){
-    const user_id = localStorage.user_id
+    const token = localStorage.token
 
-    if(user_id){
+    if(token){
       //get user info
 
       fetch("http://localhost:3001/api/v1/auto_login", {
         headers: {
-          "Authorization": user_id
+          "Authorization": token
         }
       })
       .then(res => res.json())
@@ -39,11 +39,11 @@ class App extends Component {
     }
   }
 
-  setUser = (user) => {
+  setUser = (response) => {
     this.setState({
-      currentUser: user
+      currentUser: response.user
     }, () => {
-      localStorage.user_id = user.id
+      localStorage.token = response.token
       this.props.history.push("/posts")
     })
     
@@ -53,7 +53,7 @@ class App extends Component {
     this.setState({
       currentUser: null
     }, () => {
-      localStorage.removeItem("user_id")
+      localStorage.removeItem("token")
       this.props.history.push("/login")
     })
   }

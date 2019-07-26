@@ -6,9 +6,13 @@ class Api::V1::PostsController < ApplicationController
   def up_vote
     post = Post.find(params[:id])
 
-    post.update(upvotes: post.upvotes + 1)
+    if session_user
+      post.update(upvotes: post.upvotes + 1)
 
-    render json: post
+      render json: post
+    else 
+      render json: {errors: "Please log in to up vote!"}
+    end
   end
 
   def comment
@@ -18,7 +22,7 @@ class Api::V1::PostsController < ApplicationController
       content: params[:content],
       upvotes: 0,
       post: post,
-      user: User.first
+      user: session_user
     })
 
     render json: comment

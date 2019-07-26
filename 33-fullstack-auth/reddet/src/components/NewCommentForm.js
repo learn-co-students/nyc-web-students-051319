@@ -17,7 +17,8 @@ class NewCommentForm extends React.Component{
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        "Accepts": "application/json"
+        "Accepts": "application/json",
+        "Authorization": localStorage.token
       },
       body: JSON.stringify({content: this.state.newContent})
     })
